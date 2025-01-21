@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$username', '$name', '$hashedPassword')";
     
     if ($conn->query($sql) === TRUE) {
-        // Simpan notifikasi ke dalam session
+    
         $_SESSION['notification'] = [
             'type' => 'primary',
             'message' => 'Registrasi Berhasil!'
